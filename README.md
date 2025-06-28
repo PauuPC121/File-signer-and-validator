@@ -1,59 +1,47 @@
-Firmador y Validador de Archivos con Java
+# 🛡️ M09Asimetrics – Firma Digital y Verificación de Archivos en Java
 
-Este proyecto implementa un sistema básico de firma digital y verificación de firmas utilizando Java y claves RSA almacenadas en un keystore.
+Este proyecto implementa un sistema sencillo de **firma digital** y **verificación de integridad** de archivos utilizando Java y claves RSA contenidas en un **Keystore**.
 
-Qué hace este programa:
+---
 
-Firma todos los archivos de una carpeta y devuelve su firma en Base64.
+## ✍️ Firmar Archivos
 
-Valida archivos contra su firma para comprobar si han sido modificados.
+1. Compila y ejecuta `Signador.java`:
+   ```bash
+   javac Signador.java
+   java Signador
+Introduce la ruta de la carpeta que contiene los archivos a firmar.
 
-Cómo usarlo:
+El sistema imprimirá en consola la firma Base64 de cada archivo.
 
-Firmar archivos:
+🔎 Validar una Firma
+Compila y ejecuta Validador.java:
 
-Compila y ejecuta el archivo Signador.java:
-
-javac Signador.java
-java Signador
-
-Luego:
-
-Introduce la ruta de la carpeta con los archivos a firmar.
-
-Obtendrás en consola la firma en Base64 de cada archivo.
-
-Validar un archivo:
-
-Compila y ejecuta el archivo Validador.java:
-
+bash
+Copiar
+Editar
 javac Validador.java
 java Validador
+Introduce la ruta del archivo y la firma en Base64.
 
-Luego:
+El sistema te dirá si la firma es válida o no válida.
 
-Introduce la ruta del archivo y su firma (en Base64).
-
-El sistema te dirá si la firma es válida o no.
-
-Keystore:
-
+🔐 Keystore
 Archivo: key.jks
 
 Alias: fitxers
 
 Contraseña: password
 
-Para generar el keystore:
-
+Crear un keystore con keytool:
+bash
+Copiar
+Editar
 keytool -genkeypair -alias fitxers -keyalg RSA -keystore key.jks -storepass password
-
-Requisitos:
-
+📦 Requisitos
 Java 8 o superior
 
-Archivo key.jks válido en el mismo directorio del programa
+Archivo key.jks válido en el mismo directorio del proyecto
 
-Licencia:
-
+🧾 Licencia
 MIT © Pau
