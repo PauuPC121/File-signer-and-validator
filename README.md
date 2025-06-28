@@ -1,54 +1,59 @@
-¡Aquí lo tienes listo para copiar y pegar directamente, sin secciones innecesarias! 👇
+Firmador y Validador de Archivos con Java
 
----
+Este proyecto implementa un sistema básico de firma digital y verificación de firmas utilizando Java y claves RSA almacenadas en un keystore.
 
-````markdown
-# 🔐 M09Asimetrics – Firma y Validación de Archivos con Java
+Qué hace este programa:
 
-Este proyecto implementa un sistema básico de **firma digital** y **verificación de firmas** utilizando Java y el algoritmo `SHA256withRSA`.
+Firma todos los archivos de una carpeta y devuelve su firma en Base64.
 
-## Cómo usarlo
+Valida archivos contra su firma para comprobar si han sido modificados.
 
-### 🖊️ Firmar archivos
+Cómo usarlo:
 
-1. Ejecuta `Signador.java`
-2. Introduce la ruta de la carpeta con los archivos a firmar
-3. Obtendrás por consola la firma en Base64 de cada archivo
+Firmar archivos:
 
-```bash
+Compila y ejecuta el archivo Signador.java:
+
+javac Signador.java
 java Signador
-````
 
-### 🔍 Validar una firma
+Luego:
 
-1. Ejecuta `Validador.java`
-2. Introduce la ruta del archivo y la firma en base64
-3. El sistema te dirá si la firma es válida o no
+Introduce la ruta de la carpeta con los archivos a firmar.
 
-```bash
+Obtendrás en consola la firma en Base64 de cada archivo.
+
+Validar un archivo:
+
+Compila y ejecuta el archivo Validador.java:
+
+javac Validador.java
 java Validador
-```
 
-## Keystore
+Luego:
 
-* Archivo: `key.jks`
-* Alias: `fitxers`
-* Contraseña: `password`
+Introduce la ruta del archivo y su firma (en Base64).
 
-Para generar uno:
+El sistema te dirá si la firma es válida o no.
 
-```bash
+Keystore:
+
+Archivo: key.jks
+
+Alias: fitxers
+
+Contraseña: password
+
+Para generar el keystore:
+
 keytool -genkeypair -alias fitxers -keyalg RSA -keystore key.jks -storepass password
-```
 
-## Requisitos
+Requisitos:
 
-* Java 8 o superior
-* Archivo `key.jks` válido en la raíz del proyecto
+Java 8 o superior
 
-## Licencia
+Archivo key.jks válido en el mismo directorio del programa
+
+Licencia:
 
 MIT © Pau
-
-```
-```
