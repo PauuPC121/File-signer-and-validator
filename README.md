@@ -1,4 +1,3 @@
-Aquí tienes el contenido completo del `README.md` listo para **copiar y pegar directamente** en tu repositorio:
 
 ---
 
@@ -95,11 +94,8 @@ keytool -genkeypair -alias fitxers -keyalg RSA -keystore key.jks -storepass pass
 
 ## 📝 Licencia
 
-MIT © \[Tu Nombre]
+MIT © \Pau
 
 ```
 
 ---
-
-¿Quieres también el `.gitignore`, instrucciones de compilación o estructura de carpetas?
-```
